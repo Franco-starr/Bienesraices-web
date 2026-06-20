@@ -1,0 +1,22 @@
+{
+    "name": "franco/bienesraices",
+    "description": "Creando un proyecto con pdo",
+    "autoload": {
+        "psr-4": {
+            "Model\\": "./models/",
+            "MVC\\": "./",
+            "Controllers\\": "./controllers/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Franco",
+            "email": "franco.star.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "intervention/image": "2",
+        "phpmailer/phpmailer": "^7.1",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

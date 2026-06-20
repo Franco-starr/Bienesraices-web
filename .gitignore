@@ -1,0 +1,21 @@
+# Dependencias
+/vendor/
+/node_modules/
+
+# Entorno
+.env
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# Build
+#/public/build/
+
+# Logs
+*.log
