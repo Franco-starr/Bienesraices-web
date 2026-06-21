@@ -28,4 +28,27 @@ npm install
 cp .env.example .env   # configurar credenciales
 ```
 
-Configurar el `.env` con los datos de tu base de datos y SMTP, luego importar el SQL y ejecutar `gulp` para compilar assets.
+Configurar el `.env` con los datos de tu base de datos y SMTP, luego importar `sql/bienes_raices.sql` en MySQL y ejecutar `gulp` para compilar assets.
+
+## Panel de administración
+
+El acceso al panel está protegido con autenticación. Las contraseñas se almacenan como hashes de bcrypt (PHP `password_hash`) en la tabla `usuario`.
+
+### Crear un usuario administrador en producción
+
+1. Subí este script temporal al servidor y ejecutalo una vez:
+
+   ```php
+   <?php
+   echo password_hash('TuContraseña', PASSWORD_DEFAULT);
+   ```
+
+2. Copiá el hash generado y ejecutá:
+
+   ```sql
+   INSERT INTO usuario (email, password) VALUES ('admin@tudominio.com', 'hash_generado');
+   ```
+
+3. **Borrá el script temporal** del servidor.
+
+> El archivo `sql/bienes_raices.sql` incluye un usuario de prueba con contraseña `admin` (hash bcrypt). No lo uses en producción, creá uno nuevo.
