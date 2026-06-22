@@ -33,13 +33,14 @@ class Router {
 
 
 
-        $urlActual = $_SERVER['PATH_INFO'] ?? '/';
+        $urlActual = strtok($_SERVER['REQUEST_URI'], '?') ?: '/';
         $metodo = $_SERVER['REQUEST_METHOD'];
         //debuguear($urlActual);
 
         //Proteger las rutas
         if( in_array($urlActual, $rutas_protegidas) && !$auth) {
             header('Location: /');
+            exit;
         }
 
         if($metodo === 'GET') {

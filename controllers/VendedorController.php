@@ -21,6 +21,7 @@ class VendedorController {
             if(empty($errores)){
                 $vendedor->guardar();
                 header('Location: /admin?resultado=1');
+                exit;
             }
 
         }
@@ -76,6 +77,7 @@ class VendedorController {
                         $vendedor = Vendedor::find($id);
                         $vendedor->eliminar();
                         header('location: /admin/index.php?resultado=3');
+                        exit;
                     } 
                 }
 

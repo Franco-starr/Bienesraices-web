@@ -3,7 +3,7 @@
 
 define('TEMPLATES_URL', __DIR__ . '/templates');
 define('FUNCIONES_URL', __DIR__ . 'funciones.php');
-define('CARPETA_IMAGENES', $_SERVER['DOCUMENT_ROOT'] . '/imagenes/');
+define('CARPETA_IMAGENES', __DIR__ . '/../public/imagenes/');
 
 function incluirTemplate( string $nombre, bool $inicio = false ){
     include  TEMPLATES_URL ."/{$nombre}.php";
@@ -15,6 +15,7 @@ function estaAutenticado() {
 
     if( !$_SESSION['login'] ) {
         header('Location: /index.php');
+        exit;
     } 
 }
 
@@ -65,6 +66,7 @@ function validarRedireccionar(string $url) {
 
     if (!$id) {
         header("LOCATION: $url");
+        exit;
     }
 
     return $id;

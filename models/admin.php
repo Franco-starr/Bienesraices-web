@@ -67,6 +67,7 @@ class Admin extends ActiveRecord {
         $_SESSION['login'] = true;
 
         header('Location: /admin');
+        exit;
     }
 
 }

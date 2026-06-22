@@ -69,6 +69,7 @@ class PropiedadController {
 
                 if($resultado) {
                     header('Location: /admin?resultado=1');
+                    exit;
                 }
             }
         
@@ -134,6 +135,7 @@ class PropiedadController {
                 $resultado = $propiedad->eliminar();
                 if($resultado) {
                     header('Location: /admin?resultado=3');
+                    exit;
                 }
             }
         }
