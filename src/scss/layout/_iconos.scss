@@ -11,6 +11,8 @@
         width: 10rem;
         height: 10rem;
         object-fit: contain;
+        display: block; // Convierte la imagen en bloque
+        margin: 0 auto; // La centra horizontalmente
     }
     h3 {
         text-transform: uppercase;
