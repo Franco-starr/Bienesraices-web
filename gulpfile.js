@@ -73,3 +73,6 @@ exports.default = parallel(
   versionWebp,
   watchArchivos
 );
+
+exports.css = css;
+exports.imagenes = imagenes;
