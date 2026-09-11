@@ -10,7 +10,7 @@
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie nec lacus id interdum.</p>
     </div>
     <div class="icono">
-        <img src="/build/img/icono2.svg" alt="icono tiempo" loading="lazy">
+        <img src="/build/img/icono3.svg" alt="icono tiempo" loading="lazy">
         <h3> A tiempo </h3>
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie nec lacus id interdum.</p>
     </div>
